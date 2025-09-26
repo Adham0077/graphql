@@ -14,3 +14,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository download
+        uses: actions/checkout@v4
+
+      - name: node-modules download
+        run: npm install
