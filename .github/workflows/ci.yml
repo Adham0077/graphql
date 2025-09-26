@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches: [main]
+
+jobs:
+  repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository download
+        uses: action/checkout
+
+      - name: node.js download
+        uses: action/setup-node
