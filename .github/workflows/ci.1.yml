@@ -2,7 +2,7 @@ name: Loyihani testlash
 
 on:
   push:
-    branches: [main, dev]
+    branches: [main]
 
 jobs:
   clone:
@@ -38,5 +38,11 @@ jobs:
     needs: install_node_modules
     runs-on: ubuntu-latest
     steps:
+      - name: Repositoriyani yuklash
+        uses: actions/checkout@v4
+
+      - name: node_modules'ni o'rnatish
+        run: npm i
+
       - name: Build qilish
         run: npm run build
