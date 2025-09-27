@@ -23,3 +23,6 @@ jobs:
 
       - name: node-modules download
         run: npm install
+
+      - name: build
+        run: npm run build
